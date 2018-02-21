@@ -43,7 +43,7 @@ self.addEventListener('fetch', (event) => {
     //    headers: {
     //        'Content-Type': 'text/html', foo: 'bar'
     //    }
-    //})
+    //});
     
     let requestUrl = new URL(event.request.url);
     //on the unlikely chance that the service worker serves more than one origin
@@ -133,4 +133,4 @@ function serveAvatar(request) {
 
 self.addEventListener('message', event => {
     if (event.data.key == 'skipWaiting') self.skipWaiting();
-});
+})

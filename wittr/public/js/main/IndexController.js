@@ -29,7 +29,7 @@ export default function IndexController(container) {
 
     this._cleanImageCache();
     setInterval(() => this._cleanImageCache(), 1000 * 60 * 5);
-    //setInterval(this._cleanImageCache, 1000 * 10);        //same as above?
+    //setInterval(this._cleanImageCache, 1000 * 10);        //same as above
 }
 
 //register service worker
