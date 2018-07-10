@@ -106,7 +106,7 @@ IndexController.prototype._showCachedMessages = function () {
         const dateIndex = wittrStore.index('by-date');
 
         return dateIndex.getAll().then(messages => {
-            //messages.reverse will give the same eventual value as newMessages
+            //messages.reverse() will give the same eventual value as newMessages
             let newMessages = [];
             for (let i = messages.length - 1; i >= 0; i--) {
                 newMessages.push(messages[i]);

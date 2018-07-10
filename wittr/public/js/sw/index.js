@@ -50,7 +50,7 @@ self.addEventListener('fetch', (event) => {
     if (requestUrl.origin === location.origin) {
         if (requestUrl.pathname === '/') {
             event.respondWith(caches.match('/skeleton'));
-            return
+            return;
         }
         else if (requestUrl.pathname.startsWith('/photos/')) {
             event.respondWith(servePhoto(event.request));
